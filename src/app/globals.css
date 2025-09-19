@@ -52,7 +52,7 @@
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
   /* 당근마켓 주황색 */
-  --primary: #ff6b35;
+  --primary: #ff6339;
   --primary-foreground: #ffffff;
   /* 네이버 그린 */
   --secondary: #03c75a;
@@ -60,25 +60,25 @@
   --muted: #f8f9fa;
   --muted-foreground: #6c757d;
   --accent: #fff5f0;
-  --accent-foreground: #ff6b35;
+  --accent-foreground: #ff6339;
   --destructive: #dc3545;
   --border: #e9ecef;
   --input: #f8f9fa;
-  --ring: #ff6b35;
+  --ring: #ff6339;
   /* 차트 색상들 */
-  --chart-1: #ff6b35;
+  --chart-1: #ff6339;
   --chart-2: #03c75a;
   --chart-3: #1ec800;
   --chart-4: #ffc107;
   --chart-5: #fd7e14;
   --sidebar: #f8f9fa;
   --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #ff6b35;
+  --sidebar-primary: #ff6339;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #fff5f0;
-  --sidebar-accent-foreground: #ff6b35;
+  --sidebar-accent-foreground: #ff6339;
   --sidebar-border: #e9ecef;
-  --sidebar-ring: #ff6b35;
+  --sidebar-ring: #ff6339;
 }
 
 .dark {
@@ -89,31 +89,31 @@
   --card-foreground: #ffffff;
   --popover: #2d2d2d;
   --popover-foreground: #ffffff;
-  --primary: #ff6b35;
+  --primary: #ff6339;
   --primary-foreground: #ffffff;
   --secondary: #03c75a;
   --secondary-foreground: #ffffff;
   --muted: #3a3a3a;
   --muted-foreground: #a0a0a0;
   --accent: #3a2a2a;
-  --accent-foreground: #ff6b35;
+  --accent-foreground: #ff6339;
   --destructive: #dc3545;
   --border: #404040;
   --input: #3a3a3a;
-  --ring: #ff6b35;
-  --chart-1: #ff6b35;
+  --ring: #ff6339;
+  --chart-1: #ff6339;
   --chart-2: #03c75a;
   --chart-3: #1ec800;
   --chart-4: #ffc107;
   --chart-5: #fd7e14;
   --sidebar: #2d2d2d;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ff6b35;
+  --sidebar-primary: #ff6339;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #3a2a2a;
-  --sidebar-accent-foreground: #ff6b35;
+  --sidebar-accent-foreground: #ff6339;
   --sidebar-border: #404040;
-  --sidebar-ring: #ff6b35;
+  --sidebar-ring: #ff6339;
 }
 
 @layer base {
@@ -128,7 +128,7 @@
 
 /* 당근마켓/네이버 스타일 커스텀 클래스 */
 .carrot-gradient {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  background: linear-gradient(135deg, #ff6339 0%, #ff8c42 100%);
 }
 
 .naver-gradient {
@@ -179,6 +179,6 @@
 }
 
 .input-friendly:focus {
-  border-color: #ff6b35;
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  border-color: #ff6339;
+  box-shadow: 0 0 0 3px rgba(255, 99, 57, 0.1);
 }
