@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* 당근마켓/네이버 스타일 친숙한 색상 팔레트 */
+  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  /* 당근마켓 주황색 */
+  --primary: #ff6b35;
+  --primary-foreground: #ffffff;
+  /* 네이버 그린 */
+  --secondary: #03c75a;
+  --secondary-foreground: #ffffff;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --accent: #fff5f0;
+  --accent-foreground: #ff6b35;
+  --destructive: #dc3545;
+  --border: #e9ecef;
+  --input: #f8f9fa;
+  --ring: #ff6b35;
+  /* 차트 색상들 */
+  --chart-1: #ff6b35;
+  --chart-2: #03c75a;
+  --chart-3: #1ec800;
+  --chart-4: #ffc107;
+  --chart-5: #fd7e14;
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fff5f0;
+  --sidebar-accent-foreground: #ff6b35;
+  --sidebar-border: #e9ecef;
+  --sidebar-ring: #ff6b35;
+}
+
+.dark {
+  /* 다크모드 친숙한 색상 */
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: #2d2d2d;
+  --card-foreground: #ffffff;
+  --popover: #2d2d2d;
+  --popover-foreground: #ffffff;
+  --primary: #ff6b35;
+  --primary-foreground: #ffffff;
+  --secondary: #03c75a;
+  --secondary-foreground: #ffffff;
+  --muted: #3a3a3a;
+  --muted-foreground: #a0a0a0;
+  --accent: #3a2a2a;
+  --accent-foreground: #ff6b35;
+  --destructive: #dc3545;
+  --border: #404040;
+  --input: #3a3a3a;
+  --ring: #ff6b35;
+  --chart-1: #ff6b35;
+  --chart-2: #03c75a;
+  --chart-3: #1ec800;
+  --chart-4: #ffc107;
+  --chart-5: #fd7e14;
+  --sidebar: #2d2d2d;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3a2a2a;
+  --sidebar-accent-foreground: #ff6b35;
+  --sidebar-border: #404040;
+  --sidebar-ring: #ff6b35;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+  }
+}
+
+/* 당근마켓/네이버 스타일 커스텀 클래스 */
+.carrot-gradient {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+}
+
+.naver-gradient {
+  background: linear-gradient(135deg, #03c75a 0%, #1ec800 100%);
+}
+
+.friendly-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.friendly-shadow-lg {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.friendly-border {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+}
+
+.card-friendly {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.card-friendly:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.button-friendly {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button-friendly:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.input-friendly {
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.input-friendly:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
