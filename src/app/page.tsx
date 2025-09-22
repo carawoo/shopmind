@@ -6,6 +6,7 @@ import {
   Camera, 
   Upload, 
   Zap, 
+  Brain,
   DollarSign,
   Sparkles,
   ChevronRight,

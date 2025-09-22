@@ -2,6 +2,7 @@
 
 import React, { useCallback, useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
+import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Upload, X, Image as ImageIcon, AlertCircle, Camera, Sparkles } from 'lucide-react';
@@ -187,10 +188,11 @@ export default function UploadDropzone({
                 <div className="flex items-start space-x-4">
                   {/* 이미지 미리보기 */}
                   <div className="relative w-20 h-20 bg-gray-100 rounded-xl overflow-hidden flex-shrink-0">
-                    <img
+                    <Image
                       src={file.preview}
                       alt={file.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   

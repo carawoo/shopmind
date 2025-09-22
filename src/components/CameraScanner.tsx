@@ -85,7 +85,7 @@ export default function CameraScanner({ onDetect, onError }: CameraScannerProps)
     return () => {
       stopCamera();
     };
-  }, []);
+  }, [stopCamera]);
 
   // 권한이 없는 경우
   if (hasPermission === false) {
