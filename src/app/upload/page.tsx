@@ -54,7 +54,13 @@ export default function UploadPage() {
 
       const data = await response.json();
       
-      // 결과 페이지로 이동
+      // 결과 저장 후 결과 페이지로 이동
+      try {
+        if (typeof window !== 'undefined') {
+          const key = `scan:${data.scanId}`;
+          sessionStorage.setItem(key, JSON.stringify(data));
+        }
+      } catch {}
       router.push(`/scan/${data.scanId}`);
       
     } catch (error) {
@@ -161,7 +167,13 @@ export default function UploadPage() {
       
       toast.success('검색 완료!', { id: 'text-search' });
       
-      // 결과 페이지로 이동
+      // 결과 저장 후 결과 페이지로 이동
+      try {
+        if (typeof window !== 'undefined') {
+          const key = `scan:${data.scanId}`;
+          sessionStorage.setItem(key, JSON.stringify(data));
+        }
+      } catch {}
       router.push(`/scan/${data.scanId}`);
       
     } catch (error) {

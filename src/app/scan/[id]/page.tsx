@@ -66,57 +66,20 @@ export default function ScanResultPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // 실제로는 API에서 스캔 결과를 가져와야 하지만,
-    // 현재는 목업 데이터를 사용
-    const mockData: AnalysisResult = {
-      scanId: params.id as string,
-      productInfo: {
-        name: '오리온 초코파이',
-        brand: '오리온',
-        barcode: '8801234567890',
-        ingredients: ['밀가루', '설탕', '코코아파우더', '식물성유지', '계란', '우유'],
-        nutritionFacts: {
-          calories: 120,
-          protein: 2.1,
-          carbs: 18.5,
-          fat: 4.2,
-          sodium: 85
-        },
-        allergens: ['글루텐', '우유', '계란'],
-        price: 2500,
-        healthScore: 65,
-        comparison: {
-          similarProducts: [
-            {
-              name: '롯데 초코파이',
-              price: 2200,
-              healthScore: 58,
-              pros: ['저렴한 가격', '비슷한 맛'],
-              cons: ['높은 설탕 함량', '인공 첨가물']
-            },
-            {
-              name: '오리온 초코파이 정',
-              price: 2800,
-              healthScore: 72,
-              pros: ['높은 건강 점수', '천연 재료'],
-              cons: ['높은 가격']
-            }
-          ],
-          recommendation: '오리온 초코파이 정이 건강 점수 면에서 더 우수합니다.'
+    try {
+      if (typeof window !== 'undefined') {
+        const key = `scan:${params.id as string}`;
+        const raw = sessionStorage.getItem(key);
+        if (raw) {
+          const parsed = JSON.parse(raw) as AnalysisResult;
+          setResult(parsed);
+          setLoading(false);
+          return;
         }
-      },
-      analysis: {
-        confidence: 0.95,
-        processingTime: 1.2,
-        timestamp: new Date().toISOString()
       }
-    };
-
-    // 로딩 시뮬레이션
-    setTimeout(() => {
-      setResult(mockData);
-      setLoading(false);
-    }, 1000);
+    } catch {}
+    setError('결과 데이터를 찾을 수 없습니다. 다시 시도해주세요.');
+    setLoading(false);
   }, [params.id]);
 
   if (loading) {
