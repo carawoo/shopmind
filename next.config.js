@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'images.openfoodfacts.org', 'static.openfoodfacts.org', 'fr.openfoodfacts.org', 'world.openfoodfacts.org'],
   },
 }
 
