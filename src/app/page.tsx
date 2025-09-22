@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Logo from '@/components/Logo';
 import { 
   Camera, 
   Upload, 
   Zap, 
-  Brain,
   DollarSign,
   Sparkles,
   ChevronRight,
@@ -22,12 +22,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                <Brain className="h-6 w-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900">ShopMind</h1>
-            </div>
+            <Logo size="md" />
             
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/upload" className="text-gray-600 hover:text-orange-500 transition-colors">
@@ -298,11 +293,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                  <Brain className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">ShopMind</span>
+              <div className="mb-4">
+                <Logo size="lg" showText={true} />
               </div>
               <p className="text-gray-400 text-sm">
                 AI 기반 스마트 쇼핑 도우미로<br />
